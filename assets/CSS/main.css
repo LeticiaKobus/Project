@@ -458,7 +458,7 @@ main section .parceiros-container .parceiros-campo .parceiros-img {
   }
 
   main section .section-title {
-    font-size: 2.5rem; /* Reduzindo o tamanho do título para telas menores */
+    font-size: 2rem; /* Reduzindo o tamanho do título para telas menores */
     margin: 1rem 0;
     font-weight: bold;
     text-align: center;
