@@ -168,7 +168,7 @@ main section .parceiros-container .parceiros-campo .parceiros-img {
 
 /*-------------------------------------------------------------------------*/
 
-@media (min-width: 1200px) {
+@media (min-width: 2000px) {
   main {
     background-color: var(--secondary-background-color);
     color: var(--secondary-text-color);
@@ -191,7 +191,7 @@ main section .parceiros-container .parceiros-campo .parceiros-img {
   }
 
   main section .section-title {
-    font-size: 5rem; /* Reduzindo o tamanho do título para telas menores */
+    font-size: 4.5rem; /* Reduzindo o tamanho do título para telas menores */
     margin: 1rem 0;
     font-weight: bold;
     text-align: center;
@@ -199,7 +199,7 @@ main section .parceiros-container .parceiros-campo .parceiros-img {
   }
 
   main section .section-subtitle {
-    font-size: 2rem; /* Reduzindo o tamanho do subtítulo para telas menores */
+    font-size: 3rem; /* Reduzindo o tamanho do subtítulo para telas menores */
     font-weight: bold;
     text-align: center;
     color: var(--primary-text-color);
@@ -207,13 +207,146 @@ main section .parceiros-container .parceiros-campo .parceiros-img {
   }
 
   main section .section-text {
-    font-size: 1.5rem; /* Reduzindo o tamanho do texto para telas menores */
+    font-size: 2.5rem; /* Reduzindo o tamanho do texto para telas menores */
     text-align: center;
     color: var(--secondary-text-color);
     padding: 0.5rem;
     width: 100%; /* Reduzindo a largura do texto para telas menores */
     margin: 0 auto;
-    line-height: 1.5rem;
+    line-height: 3rem;
+    text-wrap: wrap; /* Permite que o texto seja quebrado em várias linhas */
+    overflow-wrap: break-word;
+  }
+
+  main section .equipe-container {
+    display: grid;
+    grid-template-columns: repeat(
+      2,
+      1fr
+    ); /* Alterando para uma única coluna para telas menores */
+    gap: 1rem; /* Espaçamento entre os itens */
+    margin: 1rem 0;
+    width: 100%;
+  }
+
+  main section .equipe-container .equipe-campo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    margin: 1rem 0;
+    padding: 2rem;
+    background-color: var(--primary-background-color);
+    box-shadow: var(--container-shadow);
+    border-radius: 0.5rem;
+  }
+
+  main section .equipe-container .equipe-campo .equipe-img {
+    width: 100%;
+    height: auto;
+    max-width: 180px; /* Largura máxima definida para garantir que a imagem não se estenda além da tela */
+    border-radius: 10px;
+  }
+
+  main section .equipe-container .equipe-campo .equipe-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.25rem;
+    margin: 1rem 0;
+  }
+
+  main section .equipe-container .equipe-campo .equipe-info .equipe-name {
+    font-size: 2rem; /* Reduzindo o tamanho do nome para telas menores */
+    font-weight: bold;
+    text-align: center;
+    color: var(--main-text-color);
+  }
+
+  main section .equipe-container .equipe-campo .equipe-info .equipe-role {
+    font-size: 1.5rem; /* Reduzindo o tamanho do cargo para telas menores */
+    font-weight: bold;
+    text-align: center;
+    color: var(--primary-text-color);
+    margin-bottom: 0.5rem;
+  }
+
+  main section .equipe-container .equipe-campo .equipe-info .equipe-social a {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    text-decoration: none;
+    color: var(--primary-text-color);
+    border: none;
+    padding: 0.5rem 1rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    gap: 0.5rem;
+    transition: 0.25s ease;
+  }
+
+  main
+    section
+    .equipe-container
+    .equipe-campo
+    .equipe-info
+    .equipe-social
+    a:hover {
+    color: var(--active-main-text-color);
+  }
+}
+
+/*---------------------------------------------------------------------------*/
+
+@media (max-width: 2000px) {
+  main {
+    background-color: var(--secondary-background-color);
+    color: var(--secondary-text-color);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  main section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 0.5rem;
+    margin: 1rem 0;
+    width: 100%;
+  }
+
+  main section .section-title {
+    font-size: 3.5rem; /* Reduzindo o tamanho do título para telas menores */
+    margin: 1rem 0;
+    font-weight: bold;
+    text-align: center;
+    color: var(--main-text-color);
+  }
+
+  main section .section-subtitle {
+    font-size: 2.5rem; /* Reduzindo o tamanho do subtítulo para telas menores */
+    font-weight: bold;
+    text-align: center;
+    color: var(--primary-text-color);
+    padding: 0.5rem;
+  }
+
+  main section .section-text {
+    font-size: 2rem; /* Reduzindo o tamanho do texto para telas menores */
+    text-align: center;
+    color: var(--secondary-text-color);
+    padding: 0.5rem;
+    width: 100%; /* Reduzindo a largura do texto para telas menores */
+    margin: 0 auto;
+    line-height: 2rem;
     text-wrap: wrap; /* Permite que o texto seja quebrado em várias linhas */
     overflow-wrap: break-word;
   }
@@ -301,7 +434,7 @@ main section .parceiros-container .parceiros-campo .parceiros-img {
 
 /*---------------------------------------------------------------------------*/
 
-@media (max-width: 1200px) {
+@media (max-width: 1700px) {
   main {
     background-color: var(--secondary-background-color);
     color: var(--secondary-text-color);
@@ -458,7 +591,7 @@ main section .parceiros-container .parceiros-campo .parceiros-img {
   }
 
   main section .section-title {
-    font-size: 1.5rem; /* Reduzindo o tamanho do título para telas menores */
+    font-size: 2.5rem; /* Reduzindo o tamanho do título para telas menores */
     margin: 1rem 0;
     font-weight: bold;
     text-align: center;
@@ -466,7 +599,7 @@ main section .parceiros-container .parceiros-campo .parceiros-img {
   }
 
   main section .section-subtitle {
-    font-size: 1rem; /* Reduzindo o tamanho do subtítulo para telas menores */
+    font-size: 2rem; /* Reduzindo o tamanho do subtítulo para telas menores */
     font-weight: bold;
     text-align: center;
     color: var(--primary-text-color);
@@ -474,13 +607,13 @@ main section .parceiros-container .parceiros-campo .parceiros-img {
   }
 
   main section .section-text {
-    font-size: 0.5rem; /* Reduzindo o tamanho do texto para telas menores */
+    font-size: 1.5rem; /* Reduzindo o tamanho do texto para telas menores */
     text-align: center;
     color: var(--secondary-text-color);
     padding: 0.5rem;
     width: 100%; /* Reduzindo a largura do texto para telas menores */
     margin: 0 auto;
-    line-height: 1.5rem;
+    line-height: 1.9rem;
     text-wrap: wrap; /* Permite que o texto seja quebrado em várias linhas */
     overflow-wrap: break-word;
   }
