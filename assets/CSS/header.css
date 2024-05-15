@@ -118,10 +118,113 @@ header .title-background div a .icon-play {
 header .title-background div a span {
   margin-left: 0.5rem;
 }
+header .label-links,
+.checkbox {
+  display: none;
+}
 
 /*----------------------------------------------------------------------------*/
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1800px) {
+  header {
+    background-color: var(--primary-background-color);
+    color: var(--primary-text-color);
+    margin-top: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  header .nav-background {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0 1rem; /* Reduzindo o preenchimento para telas menores */
+    background-color: var(--primary-background-color);
+    position: fixed;
+    top: 0;
+    z-index: 999;
+  }
+
+  header .nav-background .logo {
+    width: 180px; /* Reduzindo o tamanho do logo para telas menores */
+    margin-left: 5%;
+  }
+
+  header .nav-background nav .links .link a {
+    text-decoration: none;
+    color: var(--primary-text-color);
+    font-weight: bold;
+    padding: 0.25rem;
+    font-size: 2rem;
+    transition: 0.25s ease;
+  }
+
+  header .title-background {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 4rem; /* Reduzindo a margem superior para telas menores */
+  }
+
+  header .title-background .title {
+    font-size: 3.5rem; /* Reduzindo o tamanho do título para telas menores */
+    padding: 0.5rem; /* Reduzindo o preenchimento para telas menores */
+    text-shadow: var(--shadow);
+  }
+
+  header .title-background div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem 1rem; /* Reduzindo o preenchimento para telas menores */
+  }
+
+  header .title-background div .subtitle {
+    font-size: 4rem; /* Reduzindo o tamanho do subtítulo para telas menores */
+    padding: 0.5rem; /* Reduzindo o preenchimento para telas menores */
+  }
+
+  header .title-background div a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    border: none;
+    border-radius: 0.5rem;
+    padding: 0.5rem 1rem; /* Reduzindo o preenchimento para telas menores */
+    font-size: 1rem; /* Reduzindo o tamanho do texto do link para telas menores */
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.25s ease;
+    color: var(--primary-text-color);
+  }
+
+  header .title-background div a .icon-play {
+    width: 50px; /* Reduzindo o tamanho do ícone para telas menores */
+  }
+
+  header .title-background div a span {
+    margin-left: 0.25rem; /* Reduzindo a margem do texto do link para telas menores */
+    font-size: 1.5rem;
+  }
+
+  header .label-links,
+  .checkbox {
+    display: none;
+  }
+}
+
+/*----------------------------------------------------------------------------------------*/
+
+@media screen and (max-width: 1800px) {
   header {
     background-color: var(--primary-background-color);
     color: var(--primary-text-color);
@@ -202,6 +305,11 @@ header .title-background div a span {
     margin-left: 0.25rem; /* Reduzindo a margem do texto do link para telas menores */
     font-size: 1.5rem;
   }
+
+  header .label-links,
+  .checkbox {
+    display: none;
+  }
 }
 
 /*-----------------------------------------------------------------------------------------*/
@@ -246,7 +354,7 @@ header .title-background div a span {
   }
 
   header .title-background .title {
-    font-size: 3rem; /* Reduzindo o tamanho do título para telas menores */
+    font-size: 2.5rem; /* Reduzindo o tamanho do título para telas menores */
     padding: 0.5rem; /* Reduzindo o preenchimento para telas menores */
     text-shadow: var(--shadow);
   }
@@ -331,7 +439,7 @@ header .title-background div a span {
   }
 
   header .title-background .title {
-    font-size: 2.5rem; /* Reduzindo o tamanho do título para telas menores */
+    font-size: 2rem; /* Reduzindo o tamanho do título para telas menores */
     padding: 0.5rem; /* Reduzindo o preenchimento para telas menores */
     text-shadow: var(--shadow);
   }
@@ -345,7 +453,7 @@ header .title-background div a span {
   }
 
   header .title-background div .subtitle {
-    font-size: 1.5rem; /* Reduzindo o tamanho do subtítulo para telas menores */
+    font-size: 1.3rem; /* Reduzindo o tamanho do subtítulo para telas menores */
     padding: 0.5rem; /* Reduzindo o preenchimento para telas menores */
   }
 
@@ -372,6 +480,64 @@ header .title-background div a span {
     margin-left: 0.25rem; /* Reduzindo a margem do texto do link para telas menores */
     font-size: 1.3rem;
   }
+
+  @media (max-width: 768px) {
+    header .nav-background nav {
+      display: block;
+      padding: 1rem; /* Adicionando preenchimento ao menu de navegação */
+    }
+
+    header .label-links,
+    .checkbox {
+      display: none;
+    }
+
+    header .nav-background nav .links {
+      display: none;
+      position: absolute;
+      top: 5.6875rem;
+      left: 0;
+      background-color: rgb(245, 245, 245);
+      text-align: right;
+      width: 100%;
+      height: 0;
+      z-index: 1;
+      transition: 0.5s;
+    }
+
+    header .label-links {
+      display: flex;
+      align-items: right;
+      gap: 0.5rem;
+      padding-block: 1rem;
+      cursor: pointer;
+    }
+
+    header .nav-background nav .links .link {
+      margin: 0rem; /* Reduzindo a margem entre os itens do menu */
+      background-color: rgb(245, 245, 245);
+    }
+
+    header .hamburguer {
+      border-top: 0.125rem solid;
+      width: 1.25rem;
+    }
+
+    .hamburguer::before,
+    .hamburguer::after {
+      content: " ";
+      display: block;
+      width: 1.25rem;
+      height: 0.125rem;
+      background: currentColor;
+      margin-top: 0.3125rem;
+    }
+
+    .checkbox:checked ~ .links {
+      display: block;
+      height: calc(100vh - 44.6875rem);
+    }
+  }
 }
 
 /*------------------------------------------------------------------------------------*/
@@ -381,7 +547,7 @@ header .title-background div a span {
     background-color: var(--primary-background-color);
     color: var(--primary-text-color);
     padding: 1.5rem 1rem; /* Reduzindo o preenchimento para telas menores */
-    margin-top: 25%;
+    margin-top: 5%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -402,7 +568,7 @@ header .title-background div a span {
   }
 
   header .nav-background .logo {
-    width: 150px; /* Reduzindo o tamanho do logo para telas menores */
+    width: 100px; /* Reduzindo o tamanho do logo para telas menores */
     margin-left: 5%;
   }
 
@@ -470,13 +636,55 @@ header .title-background div a span {
       padding: 1rem; /* Adicionando preenchimento ao menu de navegação */
     }
 
+    header .label-links,
+    .checkbox {
+      display: none;
+    }
+
     header .nav-background nav .links {
-      flex-direction: column; /* Alterando a direção do menu para coluna */
-      align-items: center; /* Centralizando os itens do menu */
+      display: none;
+      position: absolute;
+      top: 4.6875rem;
+      left: 0;
+      background-color: rgb(245, 245, 245);
+      text-align: right;
+      width: 100%;
+      height: 0;
+      z-index: 1;
+      transition: 0.5s;
+    }
+
+    header .label-links {
+      display: flex;
+      align-items: right;
+      gap: 0.5rem;
+      padding-block: 1rem;
+      cursor: pointer;
     }
 
     header .nav-background nav .links .link {
-      margin: 0.25rem; /* Reduzindo a margem entre os itens do menu */
+      margin: 0; /* Reduzindo a margem entre os itens do menu */
+      background-color: rgb(245, 245, 245);
+    }
+
+    header .hamburguer {
+      border-top: 0.125rem solid;
+      width: 1.25rem;
+    }
+
+    .hamburguer::before,
+    .hamburguer::after {
+      content: " ";
+      display: block;
+      width: 1.25rem;
+      height: 0.125rem;
+      background: currentColor;
+      margin-top: 0.3125rem;
+    }
+
+    .checkbox:checked ~ .links {
+      display: block;
+      height: calc(100vh - 44.6875rem);
     }
   }
 }
