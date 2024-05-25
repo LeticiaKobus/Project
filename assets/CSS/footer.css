@@ -9,6 +9,31 @@ footer {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-align: center;
+}
+
+footer .geral {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  margin-top: 1rem; /* Adiciona espaço entre o texto e o link */
+  justify-content: center;
+}
+
+footer .geral .footer_active {
+  text-align: left; /* Alinha o link à esquerda */
+  margin-right: 1rem;
+}
+
+footer .geral .footer_active h6 {
+  text-decoration: none;
+  color: var(--primary-text-color); /* Define a cor do link */
+}
+
+footer .geral .footer_active h6:hover {
+  color: var(
+    --active-main-text-color
+  ); /* Define a cor ao passar o mouse sobre o link */
 }
 
 /*----------------------------------------------------------------------------*/
